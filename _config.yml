@@ -1,1 +1,15 @@
-theme: jekyll-theme-cayman
+lang: pl_PL
+
+title: kefflar.pl 
+author: Leszek Bal 
+description: "Website"
+
+remote_theme: platframe/platframe
+
+socials:
+  - name: "GitHub"
+    url: "https://github.com/kefflar/"
+    icon: "fa-github"
+  - name: "Email"
+    url: "mailto:kefflar@gmail.com"
+    icon: "fa-envelope-o"
