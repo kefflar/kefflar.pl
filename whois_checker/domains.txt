@@ -1,0 +1,7 @@
+# Domain list for WHOIS checking
+# Add one domain per line (without http:// or www.)
+# Lines starting with # are comments
+
+kefflar.pl
+google.com
+example.com
