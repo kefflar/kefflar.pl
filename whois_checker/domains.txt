@@ -1,0 +1,6 @@
+# Sample domains for WHOIS checking
+# One domain per line, comments start with #
+
+example.com
+example.org
+google.com
