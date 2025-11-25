@@ -350,21 +350,8 @@ def save_results_csv(results, output_file, append=False):
 
     file_exists = os.path.exists(output_file)
     mode = "a" if append and file_exists else "w"
+    # Write header only when creating/overwriting file, never when appending
     write_header = not (append and file_exists)
-
-    # Check if existing file has header when appending
-    if append and file_exists:
-        try:
-            with open(output_file, "r", encoding="utf-8", newline="") as f:
-                reader = csv.reader(f)
-                first_row = next(reader, None)
-                # If first row matches our fieldnames, it's a header
-                if first_row == fieldnames:
-                    write_header = False
-                else:
-                    write_header = False  # Don't add duplicate headers
-        except (IOError, StopIteration):
-            pass
 
     with open(output_file, mode, encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
